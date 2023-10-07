@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 12vh;
+    background-color: #353A40;
+
+    .header__caja--logo {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        color: #fff;
+        .header__logo {
+            height: 5rem;
+        }
+    }
+
+    .header__nav {
+        .header__links {
+            cursor: pointer;
+            color: #a7a7a7;
+            margin: 0 0.5rem;
+        }
+        .header__links:hover {
+            color: #fff;
+        }
+        .header__links:last-child:hover{
+            border-bottom: 1px solid;
+        }
+        .header__links:first-child {
+            color: #fff;
+        }
+        .header__links:last-child {
+            color: #29A744;
+        }
+    }
+    .header__menu {
+        display: none;
+    }
+    @media(max-width: 980px) {
+        .header__nav {
+            display: none;
+        }
+        .header__menu {
+            display: block;
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: end;
+    height: 100vh;
+    background: linear-gradient(to right top, #000000d5, #0000006c, #000000da), url(assets/img/hawaii.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    .hero__caja {
+        padding: 5% 11% 0 0;
+    }
+    .hero__h1 {
+        font-size: 2rem;
+    }
+    .hero__texto {
+        line-height: 1.4rem;
+        text-align: end;
+        margin: 1.5rem 0;
+    }
+    .hero__botones {
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 0.2rem;
+    }
+    .hero__botones:first-child {
+        background-color: #ffffff00;
+        border: 1px solid #dbdbdb;
+        margin-right: 1rem;
+    }
+    .hero__botones:first-child:hover {
+        background-color: #29A744;
+        border: none;
+        transition: 1s;
+        border-radius: 0.5rem;
+    }
+    .hero__botones:last-child {
+        background-color: #29A744;
+        border: none;
+    }
+    .hero__botones:last-child:hover {
+        background-color: #ffffff00;
+        border: 1px solid #dbdbdb;
+        transition: 1s;
+        border-radius: 0.5rem;
+    }
+@media(max-width: 620px) {
+    .hero, .hero__texto, .hero__caja--botones, .hero__h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .hero__caja {
+        padding: 0;
+    }
+}
+}
+
+.oradores {
+    height: 100%;
+    padding-bottom: 3rem;
+    .oradores__texto, .oradores__h2 {
+        text-align: center;
+        margin: 1rem;
+    }
+    .oradores__h2 {
+        font-size: 2.5rem;
+    }
+    .oradores__caja {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+    }
+    .oradores__caja--individual {
+        width: 28%;
+        border: 1px solid #a7a7a78a;
+    }
+    .oradores__caja--individual:hover {
+        box-shadow: 0 0 3px;
+    }
+    .oradores__imagen {
+        width: 100%;
+    }
+    .oradores__caja--lenguajes {
+        display: flex;
+    }
+    .oradores__lenguajes, .oradores__lenguajes--variante {
+        margin: 1rem 0 0 1rem;
+        border-radius: 0.4rem;
+        padding: 0 0.4rem;
+    }
+    .oradores__lenguajes:first-child {
+        font-weight:600;
+        background-color: #FEC106;
+    }
+    .oradores__lenguajes:last-child {
+        margin: 1rem 0 0 0.4rem;
+        background-color: #17A1B8;
+        color: #ffffff;
+    }
+    .oradores__lenguajes--variante:first-child {
+        background-color: #6D747D;
+        color: #ffffff;
+    }
+    .oradores__lenguajes--variante:last-child {
+        margin: 1rem 0 0 0.4rem;
+        color: #ffffff;
+        background-color: #DC3445;
+    }
+    .oradores__nombre {
+        margin-left: 1rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    .oradores__texto--variante {
+        margin: 1rem;
+    }
+    @media (max-width:780px) {
+        .oradores__caja {
+            flex-direction: column;
+            align-items: center;
+        }
+        .oradores__caja--individual {
+            margin: 1rem;
+            width: 80%;
+        }
+    }
+}
+
+.ubicacion {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    .ubicacion__izquierda {
+        padding: 30%;
+        background-image: url(assets/img/honolulu.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .ubicacion__derecha {
+        padding: 1rem;
+        background-color: #353A40;
+        color: #fff;
+    }
+    .ubicacion__h3 {
+        font-size: 2rem;
+    }
+    .ubicacion__texto {
+        margin: 1.5rem 0;
+    }
+    .ubicacion__link {
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+    }
+    .ubicacion__link:hover {
+        background-color: #29A744;
+        border: none;
+        transition: 1s;
+        border-radius: 0.5rem;
+    }
+}
+@media(max-width: 480px) {
+    .ubicacion__izquierda {
+        height: 30vh;
+    }
+    .ubicacion {
+        grid-template-columns: 100%;
+    }
+}
+
+.formulario {
+    
+    .formulario__texto, .formulario__h4 {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .formulario__h4 {
+        font-size: 3rem;
+    }
+    .formulario__form {
+        width: 80%;
+        margin: auto;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .formulario__input, .formulario__textarea {
+        border-radius: 0.3rem;
+        resize: none;
+        margin-left: 1rem;
+        padding-left: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #6d747d94;
+    }
+    .formulario__caja {
+        display: flex;
+        width: 70%;
+    }
+    .formulario__input {
+        width: 100%;
+        height: 2rem;
+    }
+    .formulario__textarea {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+        resize: none;
+        width: 67%;
+        height: 7rem;
+    }
+    .formulario__texto--formulario {
+        width: 67%;
+        color: #6D747D;
+    }
+    .formulario__submit {
+        cursor: pointer;
+        border-radius: 0.3rem;
+        width: 69%;
+        height: 2.5rem;
+        border: none;
+        color: #fff;
+        background-color: #96C93E;
+        font-size: 1.3rem;
+        margin: 1rem 0 1rem 1rem;
+    }
+    .formulario__submit:hover {
+        color: black;
+        background-color: #ffffff00;
+        border: 1px solid #5f5f5f;
+        transition: 1s;
+        border-radius: 0.5rem;
+    }
+}
+
+.footer {
+    padding: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(165deg, rgba(28,54,67,1) 0%, rgba(31,82,113,1) 100%);
+    .footer__links {
+        color: #fff;
+    }
+}
+@media(max-width:980px) {
+    .footer {
+     flex-direction: column;
+    } 
+    .footer__links {
+        margin-top: 1rem;
+    }
+ }
