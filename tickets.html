@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tickets.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__caja--logo">
+            <img class="header__logo" src="assets/img/codoacodo.png" alt="">
+            <p class="header__texto">Conf Bs As</p>
+        </div>
+        <nav class="header__nav">
+            <a class="header__links" href="">La conferencia</a>
+            <a class="header__links" href="#oradores">Los oradores</a>
+            <a class="header__links" href="#ubicacion">El lugar y la fecha</a>
+            <a class="header__links" href="#formulario">Conviertete en orador</a>
+            <a class="header__links" href="">Comprar tickets</a>
+        </nav>
+        <img class="header__menu" src="assets/img/menu.png" alt="">
+    </header>
+    <main>
+        <section class="tickets" id="formulario">
+            <div class="tickets__descuentos">
+                <div class="tickets__caja">
+                    <p><strong class="tickets__clase">Estudiante</strong></p>
+                    <p class="tickets__clase">Tienen un descuento</p>
+                    <p><strong>80%</strong></p>
+                    <p class="tickets__texto">* presentar documentación</p>
+                </div>
+                <div class="tickets__caja">
+                    <p><strong class="tickets__clase">Trainee</strong></p>
+                    <p class="tickets__clase">Tienen un descuento</p>
+                    <p><strong>50%</strong></p>
+                    <p class="tickets__texto">* presentar documentación</p>
+                </div>
+                <div class="tickets__caja">
+                    <p><strong class="tickets__clase">Junior</strong></p>
+                    <p class="tickets__clase">Tienen un descuento</p>
+                    <p><strong>15%</strong></p>
+                    <p class="tickets__texto">* presentar documentación</p>
+                </div>
+            </div>
+            <div class="tickets__venta">
+                <p class="ticket__venta">venta</p>
+                <h1 class="ticket__titulo">VALOR DE TICKET $200</h1>
+                <form class="tickets__formulario" action="">
+                    <div class="ticket__formulario--nombre">
+                        <input class="ticket__input" type="text" placeholder="Nombre" required>
+                        <input class="ticket__input" type="text" placeholder="Apellido" required>
+                    </div>
+                    <input type="text" class="ticket__input ticket__input--email" placeholder="Email" required>
+                    <div class="ticket__formulario--eleccion">
+                        <div class="ticket__formulario--individual">
+                            <label  class="ticket__label" for="">Cantidad</label>
+                            <input value="1" id="cantidad" class="ticket__input--ultimos" type="text" placeholder="cantidad" required>
+                        </div>
+                        <div class="ticket__formulario--individual">
+                            <label class="ticket__label" for="">Categoria</label>
+                            <select id="categoria" class="ticket__input--ultimos ticket__select" name="">
+                                <option class="options" value="0.8">Estudiante</option>
+                                <option class="options" value="0.5">Trainee</option>
+                                <option class="options" value="0.15">Junior</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p id="precio" class="tickets__pagar">Total a Pagar: $</p>
+                    <div class="tickets__botones">
+                        <button class="tickets__boton">Borrar</button>
+                        <input class="tickets__boton" type="submit">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <a class="footer__links" href="">Preguntas Frecuentes</a>
+        <a class="footer__links" href="">Contáctanos</a>
+        <a class="footer__links" href="">Prensa</a>
+        <a class="footer__links" href="">Conferencias</a>
+        <a class="footer__links" href="">Términos y condiciones</a>
+        <a class="footer__links" href="">Privacidad</a>
+        <a class="footer__links" href="">Estudiantes</a>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

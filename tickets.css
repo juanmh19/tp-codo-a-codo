@@ -1,0 +1,126 @@
+.header {
+    position: relative;
+}
+
+.tickets {
+    height: 100%;
+    .tickets__descuentos {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 2rem;
+        height: 14rem;
+    }
+    .tickets__caja {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 20%;
+        margin-right: 0.3rem;
+        border: 2px solid #227ff8;
+    }
+    @media (max-width: 780px) {
+        .tickets__descuentos {
+            flex-direction: column;
+            align-items: center;
+            height: 70%;
+        }
+        .tickets__caja {
+            width: 50%;
+            height: 40%;
+        }
+    }
+    .tickets__clase {
+        font-size: 20px;
+    }
+    .tickets__caja:nth-child(2) {
+        border:2px solid #009696;
+    }
+    .tickets__caja:last-child {
+        border:2px solid #ecaf05;
+    }
+    .tickets__texto {
+        color: #696969;
+    }
+
+    .ticket__venta, .ticket__titulo {
+        text-align: center;
+    }
+    .ticket__titulo {
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    .tickets__formulario {
+        padding-top: 1rem;
+        width: 50%;
+        margin: auto;
+    }
+    .ticket__formulario--nombre {
+        display: flex;
+    }
+   .ticket__input {
+        margin-left: 10px;
+        padding-left: 10px;
+        border: 2px #00000036 solid;
+        border-radius: 5px;
+        font-size: 18px;
+        height: 2rem;
+        width: 100%;
+   }
+   .ticket__input--email {
+    margin-top: 10px;
+    width: 96.5%;
+   }
+   .ticket__formulario--individual, .ticket__formulario--eleccion{
+    display: flex;
+    width: 100%;
+   }
+   .ticket__label {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+   }
+   .ticket__formulario--individual {
+    flex-direction: column;
+    margin-left: 0.5rem;
+   }
+   .ticket__input--ultimos {
+    padding-left: 10px;
+    border: 2px #00000036 solid;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 2rem;
+   }
+   .ticket__select {
+    height: 2.2rem;
+   }
+
+   .tickets__pagar {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    margin: 30px 0 0 10px;
+    width: 91%;
+    height: 3rem;
+    background-color: #bad7fc;
+    border-radius: 5px;
+   }
+   .tickets__botones {
+    display: flex;
+    justify-content: center;
+   }
+   .tickets__boton {
+    height: 2.5rem;
+    width: 40%;
+    margin: 1rem 10px;
+    background-color: #85c038;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+   }
+}
+
+.footer {
+    margin-top: 2rem;
+}
